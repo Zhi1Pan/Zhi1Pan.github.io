@@ -19,14 +19,17 @@
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0, 0, 0, 0.25);
+    z-index: 0;
   }
   .md-main__inner {
     max-width: none !important;
     width: 100%;
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    padding-top: 15vh;
+    box-sizing: border-box;
   }
   .md-content {
     position: relative;
@@ -42,10 +45,27 @@
   .md-content h1 {
     color: #ffffff !important;
     font-weight: 700 !important;
-    font-size: 3.5rem !important;
+    font-size: 6rem !important;
     text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.4);
-    margin: 0 !important;
+    margin: 0 0 1rem 0 !important;
   }
 </style>
 
 # zhizhi·lovethislife
+
+<p class="home-welcome">「Welcome!」</p>
+
+<div class="home-icon-row">
+  <a class="home-icon-item" href="course/">
+    <span class="home-icon-emoji">📚</span>
+    <span class="home-icon-label">Notes</span>
+  </a>
+  <a class="home-icon-item" href="life/">
+    <span class="home-icon-emoji">💃</span>
+    <span class="home-icon-label">Life</span>
+  </a>
+  <a class="home-icon-item" href="friends/">
+    <span class="home-icon-emoji">🤝</span>
+    <span class="home-icon-label">Friends</span>
+  </a>
+</div>
