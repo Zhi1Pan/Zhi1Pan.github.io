@@ -25,7 +25,7 @@
   display: flex;
   justify-content: center;
   gap: 4rem;
-  margin-top: 7rem;
+  margin-top: 5rem;
   max-width: 60%;
   width: 100%;
   margin-left: auto;
@@ -197,5 +197,41 @@ html {
   max-width: 65%;
   border-radius: 4px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* 网站主题色 - 优雅蓝 */
+:root {
+  --md-primary-fg-color: #5c8bc2;
+  --md-primary-fg-color--light: #8db4da;
+  --md-primary-fg-color--dark: #3d6a9e;
+  --md-accent-fg-color: #7bc8e8;
+  --md-accent-fg-color--transparent: rgba(123, 200, 232, 0.1);
+}
+
+/* 导航栏渐变：上蓝下白 */
+.md-header {
+  background: linear-gradient(180deg, #5c8bc2 0%, #5c8bc2 55%, #ffffff 100%) !important;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06) !important;
+  height: 3.2rem !important;
+}
+
+.md-header__topic {
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 1.25rem !important;
+}
+
+.md-tabs {
+  background: transparent !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.md-tabs__link {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.md-tabs__link--active {
+  color: #3d6a9e !important;
+  font-weight: 600;
 }
 
