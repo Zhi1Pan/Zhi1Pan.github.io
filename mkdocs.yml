@@ -26,4 +26,6 @@ nav:
     - 生活首页: life/index.md
     - 舞蹈: life/dance/index.md
     - 歌单: life/playlist/index.md
+    - 书单: life/books/index.md
   - 友链: friends/index.md
+  - 关于: about/index.md

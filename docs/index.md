@@ -62,12 +62,16 @@
     <span class="home-icon-label">Notes</span>
   </a>
   <a class="home-icon-item" href="life/">
-    <span class="home-icon-emoji">💃</span>
+    <span class="home-icon-emoji">🍸</span>
     <span class="home-icon-label">Life</span>
   </a>
   <a class="home-icon-item" href="friends/">
     <span class="home-icon-emoji">🤝</span>
     <span class="home-icon-label">Friends</span>
+  </a>
+  <a class="home-icon-item" href="about/">
+    <span class="home-icon-emoji">🔗</span>
+    <span class="home-icon-label">About</span>
   </a>
 </div>
 
