@@ -1,0 +1,951 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../fMRI/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>眼动基础 - zhizhi·lovethislife</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="zhizhi·lovethislife" class="md-header__button md-logo" aria-label="zhizhi·lovethislife" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            zhizhi·lovethislife
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              眼动基础
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="zhizhi·lovethislife" class="md-nav__button md-logo" aria-label="zhizhi·lovethislife" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    zhizhi·lovethislife
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    心理学研究技术
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    心理学研究技术
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    眼动基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fMRI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fMRI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%97%A0%E5%88%9B%E7%A5%9E%E7%BB%8F%E8%B0%83%E6%8E%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    无创神经调控
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../life/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生活
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../friends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    友链
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">眼动基础</h1>
+<h1 id="_2">眼动的生理基础</h1>
+<p>眼动：视觉系统主动选择信息的行为表现，是大脑加工结果的一种外在体现</p>
+<p>眼动追踪本身不直接记录大脑神经活动，但反映认知过程</p>
+<h2 id="retinafovea">视网膜retina和中央凹fovea</h2>
+<p><img alt="image.png" src="image.png" /></p>
+<p><img alt="image.png" src="0ff0b242-f707-4dc2-a8c2-f86aab632727.png" /></p>
+<ul>
+<li>视觉传导机制：
+①光经过整个视网膜的神经细胞网络到达感光细胞
+②视锥细胞、视杆细胞换能作用：光能转化为神经冲动
+③传递机制：
+感光细胞→双极细胞（第一级）→视神经节细胞（第二级）【视神经节发出的神经纤维视交叉后传至丘脑外侧膝状体】→第三级神经元的纤维【从外侧膝状体发出】【终止于大脑枕叶视觉中枢】
+④横向整合：
+图中还标注了水平细胞和无长突细胞。它们不是直接传递信号给大脑，而是在横向层面进行调节。水平细胞连接光感受器和双极细胞，无长突细胞连接双极细胞和神经节细胞。它们的作用是进行侧向抑制，增强明暗对比和边缘检测——这是视觉系统在眼球内部进行的初步信息加工，也是"为什么眼动能反映认知"的生理起点之一。</li>
+</ul>
+<p><img alt="image.png" src="image%201.png" /></p>
+<p>在中央凹处，<strong>光线可以直接到达感光细胞</strong>，最大程度上减少了光的散射和吸收，为高清晰度视觉创造了"物理光学窗口"。</p>
+<hr />
+<ul>
+<li>视锥细胞和视杆细胞功能及分布差异<ul>
+<li>视锥细胞：明、颜色、精细化</li>
+<li>视杆细胞：暗、动态</li>
+</ul>
+</li>
+</ul>
+<p><img alt="image.png" src="c0fdfc70-376c-4549-ae91-ac4badb0b72d.png" /></p>
+<blockquote>
+<p>一个视锥细胞连接一个双极细胞、再连接一个神经节细胞，保证了信号的高保真度  <strong>||</strong>  大量视杆细胞会汇聚到同一个神经节细胞上，空间分辨率急剧下降</p>
+<ul>
+<li>外周视野：视觉拥挤效应<ul>
+<li>如果不移动眼睛，你很难识别外周的具体字母。这是因为外周视野中多个物体的信号在视觉通路中互相干扰。这意味着，外围视野只够用来检测"有没有东西"和"东西在哪里"，而无法完成精细的识别。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><img alt="image.png" src="image%202.png" /></p>
+<p>视锥细胞<strong>分辨率高，主要感受细节</strong>，而视锥细胞主要集中在中央凹</p>
+<hr />
+<h2 id="the-cortical-magnification-factor">大脑和皮层放大因子the cortical magnification factor</h2>
+<p>视网膜：接收并把光能转换为化学能量</p>
+<p>视神经optic nerve：化学能量激活nerves把message传到大脑</p>
+<p><img alt="image.png" src="image%203.png" /></p>
+<p><img alt="image.png" src="f1dbcee7-6ce5-4dd3-9308-9889d46d416e.png" /></p>
+<p><img alt="image.png" src="35a9c2b1-ff7c-40f4-bddd-96186457e3e2.png" /></p>
+<blockquote>
+<ul>
+<li>在中央凹处，皮层放大因子约为 0.15°/mm（即视野中每 0.15° 的信息占据皮层 1mm 的范围）</li>
+<li>而在距中央凹 20° 的外周位置，这个数字变成 1.5°/mm</li>
+</ul>
+</blockquote>
+<p><strong>大约 25% 的视觉皮层专门用于处理中央凹2.5° 的视觉场景</strong></p>
+<p><strong>中央凹信息在皮层中占据了巨大面积</strong>，视网膜上同等大小的视野，中央凹区域在皮层中被放大了约10倍。That means<strong>中央凹看到的东西 = 大脑当前正在重点加工的东西</strong>。</p>
+<hr />
+<h2 id="_3">肌肉</h2>
+<ul>
+<li>三对拮抗肌
+这三对肌肉的精密配合，使眼球可以在任意方向上高速旋转，将中央凹对准新的目标<ul>
+<li>水平运动（内直肌与外直肌）</li>
+<li>垂直运动（上直肌与下直肌）</li>
+<li>旋转运动（上斜肌与下斜肌）</li>
+</ul>
+</li>
+</ul>
+<p><img alt="image.png" src="image%204.png" /></p>
+<ul>
+<li>中央凹在轴上
+大小约一臂距离的大拇指指甲盖大小</li>
+</ul>
+<p><img alt="image.png" src="image%205.png" /></p>
+<p>中央凹在眼球后极中心（共轴），而眼球肌肉系统<strong>能够快速、精准地重新部署中央凹</strong></p>
+<hr />
+<h2 id="_4">总结</h2>
+<p>视觉系统在结构上"强迫"大脑必须通过移动眼睛来选择信息</p>
+<aside>
+💡
+
+**为什么眼动追踪可以反映认知过程？**
+
+- “清晰看见”依赖于中央凹【外周视野→视觉拥挤效应】
+    - 在中央凹处，**光线可以直接到达感光细胞**，衰减较少
+    - 视锥细胞**分辨率高**（精细化，主要感受细节），且主要分布在中央凹处
+- “重要”的信息来自中央凹【视觉处理系统给的资源多所以重要】
+    - **大脑和皮层放大因子**：中央凹在大脑皮层中占据了很大的面积，即中央凹获取的信息享有优先级（极大的处理资源）
+
+---
+
+- 中央凹和眼动的关系
+    - 非常小+在轴上，所以必须移动：中央凹仅覆盖一臂距离大拇指指甲盖大小的视野+在眼球后极中心
+    - 眼球肌肉系统实现移动：实现快速、精准地重新部署
+</aside>
+
+<h1 id="_5">眼动的分类与模式</h1>
+<h2 id="fixational-eye-movement">注视fixational eye movement</h2>
+<ul>
+<li>定义：眼睛相对稳定地停留在某一位置的阶段</li>
+</ul>
+<blockquote>
+<p>不是绝对不动，otherwise会导致神经元适应，即视神经反应下降e.g.雪盲现象（因为周围都一样，动了等于没动）</p>
+<ul>
+<li>心理学意义<ul>
+<li>位置：当前正在选择或处理的信息区域</li>
+<li>时间：反映加工难度、认知负荷、兴趣程度</li>
+<li>次数：某一区域对任务的重要性或吸引力</li>
+</ul>
+</li>
+<li>分类</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th><strong>漂移drift</strong></th>
+<th><strong>震颤tremor</strong></th>
+<th><strong>微眼跳microsaccades</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>速度/频率</td>
+<td>缓慢（约50 arcmin/s即约 0.83°/s）</td>
+<td>高频（≥100Hz）</td>
+<td>快速</td>
+</tr>
+<tr>
+<td>每秒约1-2次</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>连续</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>相对不规则</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>幅度</td>
+<td>较小，&lt;0.1°</td>
+<td>极小，约0.004°</td>
+<td>小，&lt;1°/0.5°</td>
+</tr>
+<tr>
+<td>特点</td>
+<td>通常出现在微眼跳之间</td>
+<td>眼球震荡，通常叠加在漂移之上（）相伴而生</td>
+<td>类似扫视</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image.png" src="image%206.png" /></p>
+<ul>
+<li>
+<p>后像afterimage可以感觉到微眼跳</p>
+<blockquote>
+<p>强刺激适应后，在视网膜或早期视觉系统中留下的暂时性残留影像</p>
+<ul>
+<li>注视把眼动抑制到一定水平，视锥细胞产生适应性</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h2 id="saccade">眼跳saccade</h2>
+<ul>
+<li>定义：眼睛在两个注视点之间快速跳转的运动 &lt;阅读时非常明显&gt;</li>
+<li>
+<p>心理学意义</p>
+<ul>
+<li>幅度amplitude：信息采样范围</li>
+<li>速度velocity：与眼动控制和神经运动机制</li>
+<li>方向direction：搜索策略或阅读方向</li>
+<li>
+<p>潜伏期latency：注意转移和反应准备</p>
+<ul>
+<li>眼跳潜伏期
+眼跳发生前计划和实施眼跳的时间
+目标刺激出现 到 眼跳开始（150~175ms）</li>
+</ul>
+<p><img alt="image.png" src="image%207.png" /></p>
+<ul>
+<li>
+<p>认知过程影响眼跳潜伏期</p>
+<blockquote>
+<p>如果目标里包含的信息复杂、难以辨别，你的潜伏期就会变长。反过来，如果目标有极强的吸引力，潜伏期也可能被缩短。所以，测量潜伏期的长短，可以用来推断个体在处理信息时的难度和投入程度。</p>
+<pre><code>    - 眼跳潜伏期的增长通常会使目标定位的准确性增加
+</code></pre>
+<p>更长的准备时间往往意味着更高的精准度。当你有更充足的时间进行神经编码，第一次眼跳就正中目标的概率就会更高。这反映了大脑眼动控制系统为追求精度，会策略性地延长时间。</p>
+<pre><code>    - 全局效应
+</code></pre>
+<p>当屏幕上同时出现两个较近的目标时，你的第一发眼跳很可能没有落在任何一个目标上，而是落在两者之间的中点。这说明在大脑加工的第一个阶段，两个目标被视为了一个整体。要做出精确的眼跳，大脑需要更多时间来将这个模糊的整体解析为两个独立的目标。这个现象生动地证明，潜伏期内大脑对视觉信息的处理是分层的，先从模糊整体到清晰细节。</p>
+<pre><code>    - 注视点先于目标消失，潜伏期缩短
+</code></pre>
+<p>眼跳潜伏期不只是感觉器官的反应时间，其中包含了<strong>注意脱离</strong>和<strong>运动准备</strong>这两个可被分离的认知/神经过程。当你人为地提前完成"脱离"，潜伏期就显著缩短。</p>
+<pre><code>    - 存在年龄差异
+</code></pre>
+<p>儿童眼动的特征与成人不同，他们控制眼动的脑区尚在发育，潜伏期通常更长</p>
+<ul>
+<li>眼跳抑制
+正在眼跳过程中，眼睛对视觉输入的敏感性会降低</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="image.png" src="image%208.png" /></p>
+<ul>
+<li>眼跳期间的闪光不会被被试报告</li>
+</ul>
+<p><img alt="image.png" src="image%209.png" /></p>
+<ul>
+<li>↑ 两个刺激之间间隔&lt;100ms时直接看向第二个刺激</li>
+</ul>
+<p><img alt="image.png" src="image%2010.png" /></p>
+<ul>
+<li>在第一个眼跳过程中呈现第二个眼跳，第二个眼跳潜伏期的时间会明显变长</li>
+</ul>
+</li>
+</ul>
+<h2 id="smooth-pursuit">追随运动smooth pursuit</h2>
+<blockquote>
+<p>相对研究会少一点，与运动关系更大一点</p>
+<ul>
+<li>定义：观看运动物体时，头不动，眼睛追随物体运动
+p.s.通常需要一个真实的运动目标，人很难在没有移动目标的情况下随意产生稳定的平滑追踪运动</li>
+<li>心理学意义<ul>
+<li>运动知觉</li>
+<li>预测性视觉加工</li>
+<li>动作控制</li>
+<li>注意与视觉运动整合</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><img alt="image.png" src="image%2011.png" /></p>
+<p>上面这个图可以看到追踪其实是不太好的，尤其是速度比较快的时候，但是我们可以通过一些方法：</p>
+<ul>
+<li>
+<p>（补偿眼动）头部或身体运动时，为注视一个物体，眼球做出与头部或身体运动方向相反的运动</p>
+<blockquote>
+<p>老师上课给的解释是，追不上的时候快一点到物理刺激前面等等它
+</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h1 id="_6">眼动记录方法与技术</h1>
+<ul>
+<li>眼动追踪eye tracking记录什么？<ul>
+<li>eye positions</li>
+<li>eye movement</li>
+</ul>
+</li>
+</ul>
+<hr />
+<aside>
+💡
+
+- 总之，要记录：
+    - horizontal(x)&&vertical(y)
+    - positions of gaze overtime(t)
+</aside>
+
+<h2 id="_7">传统方法</h2>
+<ul>
+<li>观察法<ul>
+<li>直接：（为减小干扰）镜子、偷窥孔法</li>
+<li>
+<p>间接：后像&lt;被试自己报告&gt;</p>
+<ul>
+<li>无主试预期但引入了被试预期</li>
+</ul>
+<blockquote>
+<p>&lt;因为它固定在视网膜上，大脑补偿机制失效&gt;
+我自己的理解是：网像系统，眼动+网动==静止，但是后像在视网膜上是绑定的</p>
+<ul>
+<li>机械记录<ul>
+<li>利用角膜凸起</li>
+<li>有创+眼球运动受限+精度问题</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_8">当代方法</h2>
+<h3 id="eog">眼电图法EOG</h3>
+<ul>
+<li>
+<p>眼睛周围贴电极片，记录电位差</p>
+<ul>
+<li>
+<p>电位差：角膜与网膜代谢水平差异（0.4-1.0mV）</p>
+<p><img alt="image.png" src="b6cb3777-38a0-4f2c-bea2-83066459ad92.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>优点：便宜；高时间分辨率；可测量闭眼眼动</p>
+</li>
+<li>缺点：低空间分辨率（我知道你往左看，但是不知道你在看啥），难判断落点 Thus我们多用于诊断（粗糙分类）</li>
+</ul>
+<h3 id="_9">电磁感应法（巩膜搜索线圈法）</h3>
+<p><img alt="image.png" src="1f5c9740-1534-4090-9c49-2a184664bfb5.png" /></p>
+<ul>
+<li>优点：高空间（0.01°）&amp;&amp;时间分辨率（1000Hz）</li>
+<li>缺点：侵入性、不舒适、设备复杂、不适合大样本研究</li>
+</ul>
+<hr />
+<p>引入眼睛本身光学结构</p>
+<hr />
+<h3 id="_10">光学记录法&lt;利用光学信号&gt;</h3>
+<p>眼睛的不同结构（瞳孔、角膜、虹膜和巩膜）在光照下会形成不同的图像特征或反射特征。可以通过这些光学信息估计眼睛的转动方向。</p>
+<h4 id="-">虹膜-巩膜反射法</h4>
+<p><img alt="image.png" src="image%2012.png" /></p>
+<ul>
+<li>为啥用红外：不可见光不会对视觉过程产生干扰，但眼睛可以反射（Then反射率差异记录边界变化）</li>
+<li>缺点：没有那么精细</li>
+</ul>
+<h4 id="_11">普金野图像跟踪法</h4>
+<p><img alt="image.png" src="image%2013.png" /></p>
+<ul>
+<li>四个反射（i.e.普金野反射）利用差异最大的1、4层反射，寻找夹角变化推断眼球运动</li>
+<li>缺点：太精细，需要控制头动（bitebar）</li>
+</ul>
+<h4 id="-_1"><strong>瞳孔-角膜反射法</strong></h4>
+<ul>
+<li>工作原理：角膜反射（就是这个亮斑），头不动这个亮斑是不会动的，但眼动的时候瞳孔是会动的</li>
+</ul>
+<p><img alt="image.png" src="image%2014.png" /></p>
+<p><img alt="image.png" src="image%2015.png" /></p>
+<h3 id="_12">视频记录法</h3>
+<p><img alt="image.png" src="image%2016.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

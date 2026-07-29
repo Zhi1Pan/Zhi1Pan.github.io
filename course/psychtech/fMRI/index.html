@@ -1,0 +1,970 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../%E7%9C%BC%E5%8A%A8%E5%9F%BA%E7%A1%80/">
+      
+      
+        <link rel="next" href="../%E6%97%A0%E5%88%9B%E7%A5%9E%E7%BB%8F%E8%B0%83%E6%8E%A7/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>fMRI - zhizhi·lovethislife</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fmri" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="zhizhi·lovethislife" class="md-header__button md-logo" aria-label="zhizhi·lovethislife" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            zhizhi·lovethislife
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              fMRI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="zhizhi·lovethislife" class="md-nav__button md-logo" aria-label="zhizhi·lovethislife" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    zhizhi·lovethislife
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    心理学研究技术
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    心理学研究技术
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%9C%BC%E5%8A%A8%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    眼动基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fMRI
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fMRI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        磁共振成像的两大类
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%97%A0%E5%88%9B%E7%A5%9E%E7%BB%8F%E8%B0%83%E6%8E%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    无创神经调控
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../life/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生活
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../friends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    友链
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        磁共振成像的两大类
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fmri">fMRI</h1>
+<p><img alt="image.png" src="image.png" /></p>
+<h3 id="_1">磁共振成像的两大类</h3>
+<ul>
+<li><strong>结构像</strong>：扫描大脑物理结构，区分灰质与白质，观察沟回（“照相机”）。T1常见</li>
+<li><strong>功能像</strong>：观察大脑在不同状态下的活动情况。T2常见</li>
+</ul>
+<h1 id="mri">MRI优势</h1>
+<ul>
+<li><strong>无创</strong>（非侵入式）</li>
+<li><strong>高空间分辨率</strong>：约2毫米左右，擅长回答 <strong>“where”</strong>（哪个脑区参与活动）</li>
+<li><strong>可检测深部脑信号</strong>：如海马、杏仁核等</li>
+</ul>
+<h1 id="mri_1">MRI核心硬件</h1>
+<p><img alt="image.png" src="image%201.png" /></p>
+<p><strong>主磁体：决定成像质量</strong></p>
+<p>“基石”，产生高强、均匀磁场       3T最常见&lt;再高一点动物常见&gt;</p>
+<p>为什么不能越高越好？①技术②对人体影响（眩晕等副作用）</p>
+<p>实现：低温超导（液氦-270℃左右）</p>
+<p><strong>梯度系统：决定成像性能（→成像快慢/时间分辨率）</strong></p>
+<p>“发动机”，成像快慢&amp;&amp;梯度编码、空间定位      XYZ轴施加梯度磁场</p>
+<p>Z轴用于层面选择，XY轴用于层内定位</p>
+<p><strong>射频系统：成像的核心过程</strong></p>
+<p>“雷达”，激发人体共振，采集MR回波信号      最终实现成像</p>
+<p><strong>谱仪系统</strong></p>
+<p>“大脑”，组织协调，各模块时钟协同</p>
+<p><strong>辅助设备：实际研究过程的操作         p.s.</strong>所有设备都是核磁兼容的</p>
+<h1 id="_2">成像原理</h1>
+<h2 id="mri_2">MRI成像原理</h2>
+<p><img alt="image.png" src="image%202.png" /></p>
+<h3 id="_3">氢核自旋</h3>
+<p>对氢质子进行成像      存在于游离态水分子</p>
+<p>氢核自旋产生磁化矢量，方向随机，抵消，不产生宏观磁化矢量</p>
+<hr />
+<p>放进主磁场：发生进动【进动频率∝磁场强度】，进动产生宏观纵向（水平方向随机任旧抵消）矢量M（与主磁场同向）</p>
+<p>宏观纵向M非常小，无法直接用于成像</p>
+<h3 id="rf">射频系统RF</h3>
+<p>发射RF：（垂直方向上发射）产生共振，纵向M消失，形成横向M</p>
+<p>撤去RF：散相产生横向弛豫T2&lt;横向M快速衰减到0&gt;   与   纵向弛豫T1&lt;纵向M逐步恢复&gt;</p>
+<p>T1弛豫时间：恢复到63%</p>
+<p>T2弛豫时间：衰减到37%</p>
+<p>氢含量不同弛豫时间不同</p>
+<p><strong>信号采集时M越大，成像越亮</strong> &lt;得到了一张黑白图&gt;</p>
+<aside>
+<img src="https://app.notion.com/icons/chart-area_yellow.svg" alt="https://app.notion.com/icons/chart-area_yellow.svg" width="40px" />
+
+不同组织T1 T2值不同，加权成像
+
+T1值越大（e.g.水），纵向M恢复慢，MR信号强度越低（黑）
+
+T2值大（e.g.水），横向M减少慢，MR信号高（白）
+
+![image.png](image 3.png)
+
+</aside>
+
+<p>Q：为什么要用两种不同的方式成像？</p>
+<ol>
+<li>相互验证，准确性问题</li>
+<li>（两种像通常情况下是黑白相反的，但并不是完全对应）<ol>
+<li>T1解剖结构清晰，灰白质对比好  时间：<strong>s级</strong><ol>
+<li>区别组织边界明显</li>
+<li>脂肪明显</li>
+</ol>
+</li>
+<li>T2病理改变敏感，液体和病变显示为亮信号  时间：<strong>ms级</strong><ol>
+<li>对水的显示特别亮，那么就对水肿这种自由水相关病变非常敏感</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>Q：T1 T2不同的时间特征会不会跟是否应用于功能成像相关？</p>
+<p><img alt="image.png" src="image%204.png" /></p>
+<p>TR决定时间分辨率</p>
+<p>p.s.TR 是指两次连续的扫描（即采集整幅大脑图像）之间的时间间隔【注意不是“一次完整扫描的总时长”】</p>
+<h2 id="fmribold">fMRI成像原理：BOLD</h2>
+<ul>
+<li><strong>全称</strong>：血氧水平依赖信号</li>
+<li><strong>基本原理</strong>：<ul>
+<li>脑区活动 → 耗氧量增加 → 血氧血红蛋白含量变化 → 引起<strong>微弱</strong>磁场变化  thus  fMRI检测该变化</li>
+</ul>
+</li>
+<li><strong>重点</strong>：fMRI不直接测量神经放电，而是测量<em>血氧代谢的变化</em>（神经血管耦合）</li>
+</ul>
+<p>BOLD信号是fMRI最常用的信号，原理与近红外（fNIRS）类似。</p>
+<h3 id="hrf">HRF</h3>
+<h4 id="1-hrf">1. HRF函数响应函数</h4>
+<p><img alt="image.png" src="1d27e123-1ef7-4685-96c7-8999145d38eb.png" /></p>
+<p>大脑对一次刺激引发的BOLD信号随时间变化的曲线</p>
+<p>p.s.也可能是引起一个非常强的抑制信号</p>
+<ul>
+<li>关键时间点：<ul>
+<li>刺激出现后<strong>5~8秒</strong>信号达到峰值（不是瞬时的！）</li>
+<li>整个HRF持续约<strong>16~20秒</strong>才能回到基线</li>
+</ul>
+</li>
+<li>fMRI信号有延迟性，解释数据时必须往前推诱发的时刻</li>
+<li>实验设计必须考虑HRF的时间特性</li>
+</ul>
+<h4 id="2-hrf">2. HRF的线性叠加性</h4>
+<ul>
+<li>多个刺激间隔足够近时，它们引发的BOLD信号会线性叠加</li>
+<li>这是组块设计和快速事件相关设计的理论基础</li>
+</ul>
+<h3 id="bold-fmri">BOLD-fMRI成像质量</h3>
+<p><img alt="image.png" src="image%205.png" /></p>
+<p><img alt="image.png" src="image%206.png" /></p>
+<p><img alt="image.png" src="image%207.png" /></p>
+<h1 id="_4">实验设计</h1>
+<h2 id="_5">实验设计的基本思路</h2>
+<ol>
+<li>
+<p>明确研究问题（决定对信号时空分辨率的要求）</p>
+<p>detection（足够的强度） VS estimation（足够的时间去呈现）</p>
+<p><img alt="image.png" src="efb2f2cd-16a2-4e21-8ac4-c43cf205b6ab.png" /></p>
+</li>
+<li>
+<p>提出研究假设（可证伪，支持xx；不支持xx）</p>
+</li>
+<li>实验设计（共性/特性问题）</li>
+</ol>
+<p><img alt="image.png" src="e204410a-3c30-454e-aa59-5f6c0a1a9375.png" /></p>
+<h2 id="_6">常见实验设计类型</h2>
+<h3 id="1">1. 组块设计</h3>
+<ul>
+<li><strong>做法</strong>：一段时间内持续做同一类任务（如30秒任务，30秒休息）<ul>
+<li>TEST-REST得到任务相关的信号</li>
+</ul>
+</li>
+<li><strong>优点</strong>：<ul>
+<li>检测效能最强（信号叠加后更明显）</li>
+<li>分析相对简单（任务期 vs 休息期的均值比较）</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：<ul>
+<li>容易受信号漂移（block是有一段时间的，磁场等条件可能会发生变化）影响</li>
+<li>存在期望效应（被试知道接下来是什么任务）</li>
+</ul>
+</li>
+<li>
+<p><strong>组块时长</strong>：15~20秒（太短回不到基线，太长相同时间内采样次数少<strong>i.e.效率问题疲劳问题</strong>）</p>
+<p>考虑①信号特征②被试能够接受的最大时长</p>
+</li>
+</ul>
+<blockquote>
+<p>有些实验没办法block  i.e.每个刺激是唯一的、不可重复的情况</p>
+<p><img alt="image.png" src="image%208.png" /></p>
+<hr />
+<p><img alt="image.png" src="image%209.png" />
+</p>
+</blockquote>
+<h3 id="2">2. 事件相关设计</h3>
+<h4 id="_7">慢速事件相关</h4>
+<ul>
+<li>每个刺激间隔足够长（如20秒），保证HRF完全回到基线</li>
+<li><strong>优点</strong>：非常清晰</li>
+<li><strong>缺点</strong>：效率低，一分钟只能呈现3个刺激，被试容易胡思乱想</li>
+</ul>
+<h4 id="_8">快速事件相关（更常用）</h4>
+<ul>
+<li>刺激持续短（平均4~6秒），以随机化的间隔呈现</li>
+<li><strong>关键要求</strong>：刺激<strong><em>顺序</em></strong>和<strong><em>间隔</em></strong>必须是随机化的，否则无法通过反卷积分离信号</li>
+<li><strong>优点</strong>：效率高、更自然、可以事后根据被试行为（如记住vs忘记）分类分析</li>
+</ul>
+<p>通过叠加平均得到单个事件引发的大脑活动。</p>
+<ul>
+<li>
+<p><strong>jitter处理</strong>：随机化刺激间隔</p>
+<p>避免相邻刺激的血流动力学响应完全重叠，从而允许使用统计模型分离出每个事件对应的脑响应，提升估计效率。</p>
+</li>
+</ul>
+<p>快速高效的代价是：BOLD信号还没完全回到基线，下一个事件就开始了。需要靠<strong>精细的时间信息</strong>，把不同事件的信号从互相重叠的曲线里拆分开来。</p>
+<aside>
+💡
+
+BLOCK是一个极端，慢速事件相关也是，快速事件相关取了个中间值
+
+</aside>
+
+<h3 id="3">3. 混合设计</h3>
+<p>BLOCK里嵌套 快速事件相关</p>
+<hr />
+<h3 id="_9">信噪比</h3>
+<hr />
+<p><img alt="image.png" src="image%2010.png" /></p>
+<h2 id="_10">减法原则</h2>
+<ul>
+<li>实验条件 = 包含感兴趣成分的任务</li>
+<li>对照条件 = 除感兴趣成分外，包含尽可能多的其他成分</li>
+<li>两者相减 → 得到感兴趣成分对应的脑活动</li>
+</ul>
+<h1 id="_11">数据采集</h1>
+<p>确定扫描序列：各项成像参数提前确定</p>
+<p>任务呈现所需要的设备需要提前测试</p>
+<p>2位主试：被试引导（换衣服，知情同意，在外面就开始解释了）+fMRI扫描</p>
+<ul>
+<li>
+<p>标准化指导语</p>
+<p>标准化的，保证每个人接触到的都是一样的</p>
+<p>把流程告诉他很重要，知道了就不会慌</p>
+</li>
+<li>
+<p>保持良好沟通</p>
+<p>比如，疲惫就休息【但是不能出来，出来再进去要重新扫描】</p>
+</li>
+<li>
+<p>填写实验记录单</p>
+<p>记录与被试相关的，任何可能影响实验结果的事件</p>
+</li>
+<li>
+<p>实时头动检测</p>
+<p>头动对影像的影响很大。场越强，成像越清晰头动影响越大。某些个体e.g.ADHD、老年人很难做fMRI。</p>
+<p>说话等其他部位动也会引起头动。</p>
+</li>
+</ul>
+<h1 id="_12">数据分析</h1>
+<h2 id="_13">预处理</h2>
+<p>噪音</p>
+<p>图片配准</p>
+<p>常见数据格式：DICOM&amp;NIFTI</p>
+<p>Visually check</p>
+<p><img alt="image.png" src="image%2011.png" /></p>
+<p>①匀质②形状（异物）</p>
+<p>Main Processing Steps</p>
+<ol>
+<li>
+<p>Slice timing correction：层时校正</p>
+<p>常见的拍法：顺序拍/间隔拍</p>
+<p>大脑是一层一层拍的，每层之间有时间差，校正就是把这个时间差给“抹平”，让所有层的时间对齐</p>
+<p><img alt="image.png" src="91bfc6ef-1b47-419e-bfd7-b17d5b419661.png" /></p>
+<p><img alt="image.png" src="image%2012.png" /></p>
+<p><img alt="image.png" src="image%2013.png" /></p>
+<p><img alt="image.png" src="image%2014.png" /></p>
+</li>
+<li>
+<p>Head motion correction</p>
+<p>头动不大的情况下也是可以接受的，进行校准即可。</p>
+<p>边缘容易受到影响</p>
+</li>
+<li>
+<p>Normalization（registration）：标准化</p>
+<table>
+<thead>
+<tr>
+<th>across subjects跨被试</th>
+<th>across modalities of images跨模态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>把不同人的大脑图像变形对齐到同一个标准模板上。i.e.模板对齐</td>
+<td></td>
+</tr>
+<tr>
+<td>p.s.模板来自于 [常模 or 20个人当场平均一下]</td>
+<td>跟T1像【高清】配准（把功能像配到结构像）</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image.png" src="image%2015.png" /></p>
+<p>体素voxel（fMRI成像单位 约三万i.e.分辨率）</p>
+<p>三种配准方法：</p>
+<p>landmark：粗糙，只找几个标志点对齐。</p>
+<p>volume（体素）：常用，精细程度一般。一个体素一个体素地去匹配，让变形后的大脑和模板的亮度差异最小化</p>
+<p>surface：算法重建表面，对接标准模板</p>
+</li>
+<li>
+<p>Smoothing：平滑</p>
+<p>用空间上相邻的几个体素（voxel）的信号平均值，来代替原来单个体素的信号值。
+thus：噪声被抑制了，真实信号更突出，但图像变模糊了。</p>
+<p>p.s.有一些实验不需要，比如表征多模态分析不能做（因为它要区分体素集合之间的精细反应模式）</p>
+</li>
+</ol>
+<h2 id="_14">数据分析流程</h2>
+<p><img alt="image.png" src="87633e00-cfda-4bdf-95ac-739464b1ed9d.png" /></p>
+<ol>
+<li>
+<p>1st-level analysis：针对单个人（比如孙子一个人）的数据，看他大脑哪些体素在任务期间比休息时更亮。</p>
+<p>针对每个被试单独进行，目的是建立一般线性模型（GLM），估计各条件下的脑活动，并通过设定contrast提取感兴趣的效应。</p>
+</li>
+<li>
+<p>2nd-level analysis：个体内的统计，得到一个更可靠的个体激活图</p>
+<p>第一级分析只是初步估计，第二级会把一个人里面多次扫描（比如同一个任务重复了好几遍）的信号再平均、再检验，得出这个人的“确定性”激活结果</p>
+</li>
+<li>
+<p>group analysis：把所有被试的个体统计结果拿过来，放到同一个标准空间里，看整个群体平均下来哪些脑区是真的激活。</p>
+</li>
+</ol>
+<p><img alt="image.png" src="image%2016.png" /></p>
+<p><strong>多重比较矫正(非常重要)</strong></p>
+<p><img alt="image.png" src="fbdfd049-2eb0-4e22-b51c-8ba78d04a740.png" /></p>
+<p>对10万个体素做检验，即使大脑完全没有激活，纯属噪声，我们也会看到大约 10万 × 0.05 = 5000个体素被错误地报告为“激活”</p>
+<p>fMRI一定要做</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
