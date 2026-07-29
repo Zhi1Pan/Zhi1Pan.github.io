@@ -9,6 +9,11 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
 nav:
   - 主页: index.md
   - 笔记:
