@@ -1,6 +1,7 @@
 <style>
-  body {
+  html, body {
     overflow: hidden;
+    height: 100%;
   }
   .md-header, .md-tabs, .md-sidebar {
     display: none !important;
@@ -53,7 +54,7 @@
 
 # zhizhi·lovethislife
 
-<p class="home-welcome">「Welcome!」</p>
+<p class="home-welcome">「<span id="welcome-text"></span><span class="welcome-cursor"></span>」</p>
 
 <div class="home-icon-row">
   <a class="home-icon-item" href="course/">
@@ -69,3 +70,20 @@
     <span class="home-icon-label">Friends</span>
   </a>
 </div>
+
+<script>
+(function() {
+  var el = document.getElementById('welcome-text');
+  if (!el) return;
+  var word = 'Welcome!';
+  var i = 0;
+  function type() {
+    if (i < word.length) {
+      el.textContent = word.slice(0, i + 1);
+      i++;
+      setTimeout(type, 120);
+    }
+  }
+  setTimeout(type, 600);
+})();
+</script>

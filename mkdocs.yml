@@ -22,5 +22,8 @@ nav:
       - 眼动基础: course/psychtech/眼动基础/index.md
       - fMRI: course/psychtech/fMRI/index.md
       - 无创神经调控: course/psychtech/无创神经调控/index.md
-  - 生活: life/index.md
+  - 生活:
+    - 生活首页: life/index.md
+    - 舞蹈: life/dance/index.md
+    - 歌单: life/playlist/index.md
   - 友链: friends/index.md
