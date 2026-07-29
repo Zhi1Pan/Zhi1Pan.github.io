@@ -2,8 +2,7 @@
 
 以下是一些朋友的网站，欢迎串门~
 
-- [Example 的博客](https://example.com) — 一个很棒的技术博客
-- [GitHub](https://github.com) — 全球最大的代码托管平台
+- [Alright](https://alight404.top/) — 大狗·我的网站启蒙老师
 
 ---
 
