@@ -1,9 +1,24 @@
 .home-welcome {
   color: #ffffff;
   font-size: 1.1rem;
-  margin: 0.5rem 0 0 0;
+  margin: 0.5rem auto 0 auto;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
   letter-spacing: 0.05em;
+}
+
+.welcome-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: #ffffff;
+  margin-left: 1px;
+  vertical-align: text-bottom;
+  animation: blink 0.6s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .home-icon-row {
@@ -45,7 +60,7 @@
   font-size: 1rem;
   margin-top: 0.4rem;
   font-weight: 500;
-  color: #64B5F6;
+  color: #ffffff;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -57,4 +72,28 @@
   margin: 1.2em auto;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* 全局滚动条渐变蓝 */
+html::-webkit-scrollbar,
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+html::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #1565c0, #64b5f6);
+  border-radius: 10px;
+}
+html::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #1976d2, #90caf9);
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #64b5f6 transparent;
 }

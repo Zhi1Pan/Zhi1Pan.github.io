@@ -461,9 +461,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="life/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -477,7 +488,107 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    生活
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="life/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生活首页
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="life/dance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    舞蹈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="life/playlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    歌单
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -545,8 +656,9 @@
 
 
 <style>
-  body {
+  html, body {
     overflow: hidden;
+    height: 100%;
   }
   .md-header, .md-tabs, .md-sidebar {
     display: none !important;
@@ -598,7 +710,7 @@
 </style>
 
 <h1 id="zhizhilovethislife">zhizhi·lovethislife</h1>
-<p class="home-welcome">「Welcome!」</p>
+<p class="home-welcome">「<span id="welcome-text"></span><span class="welcome-cursor"></span>」</p>
 
 <div class="home-icon-row">
   <a class="home-icon-item" href="course/">
@@ -614,6 +726,23 @@
     <span class="home-icon-label">Friends</span>
   </a>
 </div>
+
+<script>
+(function() {
+  var el = document.getElementById('welcome-text');
+  if (!el) return;
+  var word = 'Welcome!';
+  var i = 0;
+  function type() {
+    if (i < word.length) {
+      el.textContent = word.slice(0, i + 1);
+      i++;
+      setTimeout(type, 120);
+    }
+  }
+  setTimeout(type, 600);
+})();
+</script>
 
 
 
