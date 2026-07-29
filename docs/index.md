@@ -1,4 +1,6 @@
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
   html, body {
     overflow: hidden;
     height: 100%;
@@ -12,14 +14,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('assets/images/bg.jpg') center/cover no-repeat;
     position: relative;
   }
   .md-main::before {
     content: '';
     position: absolute;
+    top: -5px; left: -5px; right: -5px; bottom: -5px;
+    background: url('assets/images/bg.jpg') center/cover no-repeat;
+    filter: blur(3px);
+    z-index: 0;
+  }
+  .md-main::after {
+    content: '';
+    position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.2);
     z-index: 0;
   }
   .md-main__inner {
@@ -29,7 +38,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 15vh;
+    padding-top: 7vh;
     box-sizing: border-box;
   }
   .md-content {
@@ -46,7 +55,8 @@
   .md-content h1 {
     color: #ffffff !important;
     font-weight: 700 !important;
-    font-size: 6rem !important;
+    font-size: 9rem !important;
+    font-family: 'Great Vibes', 'Dancing Script', cursive !important;
     text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.4);
     margin: 0 0 1rem 0 !important;
   }
