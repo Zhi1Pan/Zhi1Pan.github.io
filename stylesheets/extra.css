@@ -48,3 +48,13 @@
   color: #64B5F6;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
+
+/* 笔记板块图片样式 */
+.md-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.2em auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}

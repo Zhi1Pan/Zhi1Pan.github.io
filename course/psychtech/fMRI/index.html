@@ -1273,7 +1273,7 @@
 <h2 id="mri">MRI优势</h2>
 <ul>
 <li><strong>无创</strong>（非侵入式）</li>
-<li><strong>高空间分辨率</strong>：约2毫米左右，擅长回答 <strong>“where”</strong>（哪个脑区参与活动）</li>
+<li><strong>高空间分辨率</strong>：约2毫米左右，擅长回答 <strong>“where”</strong>（哪个脑区参与活动）</li>
 <li><strong>可检测深部脑信号</strong>：如海马、杏仁核等</li>
 </ul>
 <h2 id="mri_1">MRI核心硬件</h2>
@@ -1306,15 +1306,13 @@
 <p>T2弛豫时间：衰减到37%</p>
 <p>氢含量不同弛豫时间不同</p>
 <p><strong>信号采集时M越大，成像越亮</strong> &lt;得到了一张黑白图&gt;</p>
-<p>!!! info</p>
-<pre><code>不同组织T1 T2值不同，加权成像
-
-T1值越大（e.g.水），纵向M恢复慢，MR信号强度越低（黑）
-
-T2值大（e.g.水），横向M减少慢，MR信号高（白）
-
-![image.png](image 3.png)
-</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>不同组织T1 T2值不同，加权成像</p>
+<p>T1值越大（e.g.水），纵向M恢复慢，MR信号强度越低（黑）</p>
+<p>T2值大（e.g.水），横向M减少慢，MR信号高（白）</p>
+<p><img alt="image.png" src="image%203.png" /></p>
+</div>
 <p>Q：为什么要用两种不同的方式成像？</p>
 <ol>
 <li>相互验证，准确性问题</li>
@@ -1431,10 +1429,11 @@ T2值大（e.g.水），横向M减少慢，MR信号高（白）
 </li>
 </ul>
 <p>快速高效的代价是：BOLD信号还没完全回到基线，下一个事件就开始了。需要靠<strong>精细的时间信息</strong>，把不同事件的信号从互相重叠的曲线里拆分开来。</p>
-<p>!!! tip
-    💡</p>
-<pre><code>BLOCK是一个极端，慢速事件相关也是，快速事件相关取了个中间值
-</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>💡</p>
+<p>BLOCK是一个极端，慢速事件相关也是，快速事件相关取了个中间值</p>
+</div>
 <h4 id="3">3. 混合设计</h4>
 <p>BLOCK里嵌套 快速事件相关</p>
 <hr />
@@ -1506,11 +1505,7 @@ T2值大（e.g.水），横向M减少慢，MR信号高（白）
 </thead>
 <tbody>
 <tr>
-<td>把不同人的大脑图像变形对齐到同一个标准模板上。i.e.模板对齐</td>
-<td></td>
-</tr>
-<tr>
-<td>p.s.模板来自于 [常模 or 20个人当场平均一下]</td>
+<td>把不同人的大脑图像变形对齐到同一个标准模板上。i.e.模板对齐，p.s.模板来自于 [常模 or 20个人当场平均一下]</td>
 <td>跟T1像【高清】配准（把功能像配到结构像）</td>
 </tr>
 </tbody>
