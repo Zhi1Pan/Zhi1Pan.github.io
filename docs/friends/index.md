@@ -2,7 +2,7 @@
 
 以下是一些朋友的网站，欢迎串门~
 
-- [Alright](https://alight404.top/) — 大狗·我的网站启蒙老师
+- [Alight](https://alight404.top/) — 大狗·我的网站启蒙老师
 
 ---
 
