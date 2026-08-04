@@ -254,3 +254,33 @@ body {
   font-size: 1.25rem !important;
 }
 
+/* ========== 手机端适配 ========== */
+@media (max-width: 768px) {
+  .dance-timeline::before {
+    left: 3.8rem;
+  }
+  .tl-date {
+    width: 3.8rem;
+    padding-right: 1.2rem;
+    font-size: 0.6rem;
+  }
+  .tl-dot {
+    left: 3.8rem;
+    width: 8px;
+    height: 8px;
+  }
+  .tl-card {
+    margin-left: 1.2rem;
+    padding: 0.5rem 0.6rem;
+  }
+  .tl-text {
+    font-size: 0.75rem;
+  }
+  .tl-quote {
+    font-size: 0.65rem;
+  }
+  .tl-img img {
+    max-width: 100%;
+  }
+}
+
