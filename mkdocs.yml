@@ -2,6 +2,9 @@ site_name: zhizhi·lovethislife
 theme:
   name: material
   language: zh
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
   palette:
     primary: blue
     accent: light blue

@@ -208,17 +208,37 @@ html {
   --md-accent-fg-color--transparent: rgba(123, 200, 232, 0.1);
 }
 
-/* 页面渐变蓝背景（上深下浅，1/3处变白） */
+/* 页面渐变蓝背景（上深下浅，1/3处变白，从顶部导航栏开始） */
 body {
-  background: linear-gradient(180deg, #5c8bc2 3.2rem, #8db4da 10vh, #b8d4ec 18vh, #ffffff 30vh);
+  background: linear-gradient(180deg, #4a75ab 0%, #7aaddd 12vh, #b8d4ec 22vh, #ffffff 33vh);
   background-attachment: fixed;
 }
 
-/* 导航栏渐变，底部与body渐变衔接 */
+/* 导航栏透明，让渐变从顶部自然呈现 */
 .md-header {
-  background: linear-gradient(180deg, #3d6a9e 0%, #5c8bc2 100%) !important;
+  background: transparent !important;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06) !important;
-  height: 3.2rem !important;
+}
+
+/* 滚动后导航栏显示实色背景，避免内容穿透 */
+.md-header--lifted {
+  background: #4a75ab !important;
+}
+
+/* 标签栏透明，与导航栏融为一体 */
+.md-tabs {
+  background: transparent !important;
+  border-top: none !important;
+}
+
+/* 标签链接改为白色 */
+.md-tabs__link {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.md-tabs__link--active {
+  color: #ffffff !important;
+  font-weight: 600;
 }
 
 /* 侧边栏完全透明，融入渐变背景 */
@@ -232,19 +252,5 @@ body {
   color: #ffffff !important;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   font-size: 1.25rem !important;
-}
-
-.md-tabs {
-  background: transparent !important;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.md-tabs__link {
-  color: rgba(0, 0, 0, 0.6) !important;
-}
-
-.md-tabs__link--active {
-  color: #3d6a9e !important;
-  font-weight: 600;
 }
 
