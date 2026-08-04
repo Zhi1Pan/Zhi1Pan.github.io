@@ -221,11 +221,11 @@ body {
   height: 3.2rem !important;
 }
 
-/* 侧边栏半透明，融入渐变背景 */
+/* 侧边栏完全透明，融入渐变背景 */
 .md-sidebar,
 .md-sidebar__scrollwrap,
 .md-sidebar__inner {
-  background: rgba(255, 255, 255, 0.45) !important;
+  background: transparent !important;
 }
 
 .md-header__topic {
