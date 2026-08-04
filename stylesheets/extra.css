@@ -208,11 +208,24 @@ html {
   --md-accent-fg-color--transparent: rgba(123, 200, 232, 0.1);
 }
 
-/* 导航栏渐变：上蓝下白 */
+/* 页面渐变蓝背景（上深下浅，1/3处变白） */
+body {
+  background: linear-gradient(180deg, #5c8bc2 3.2rem, #8db4da 10vh, #b8d4ec 18vh, #ffffff 30vh);
+  background-attachment: fixed;
+}
+
+/* 导航栏渐变，底部与body渐变衔接 */
 .md-header {
-  background: linear-gradient(180deg, #5c8bc2 0%, #5c8bc2 55%, #ffffff 100%) !important;
+  background: linear-gradient(180deg, #3d6a9e 0%, #5c8bc2 100%) !important;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06) !important;
   height: 3.2rem !important;
+}
+
+/* 侧边栏半透明，融入渐变背景 */
+.md-sidebar,
+.md-sidebar__scrollwrap,
+.md-sidebar__inner {
+  background: rgba(255, 255, 255, 0.45) !important;
 }
 
 .md-header__topic {
