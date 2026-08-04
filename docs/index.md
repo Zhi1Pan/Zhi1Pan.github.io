@@ -60,6 +60,28 @@
     text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.4);
     margin: 0 0 1rem 0 !important;
   }
+
+  /* 手机端适配 */
+  @media (max-width: 768px) {
+    .md-content h1 {
+      font-size: 3.8rem !important;
+    }
+    .home-welcome {
+      font-size: 0.9rem;
+    }
+    .home-icon-row {
+      gap: 1.5rem;
+      margin-top: 3rem;
+      max-width: 90%;
+      flex-wrap: wrap;
+    }
+    .home-icon-emoji {
+      font-size: 3rem;
+    }
+    .home-icon-label {
+      font-size: 0.85rem;
+    }
+  }
 </style>
 
 # zhizhi·lovethislife
