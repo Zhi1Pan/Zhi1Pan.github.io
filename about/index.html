@@ -907,7 +907,7 @@
 <p>那天晚上的晚霞特别好看，刚想拍照记录下来，有位被试就进来了，于是放下手机去开程序。</p>
 <p>再次回来，短短几分钟的时间，晚霞就已经变了样子，暗淡了下来。</p>
 <p>在这一瞬间萌发了一些想法：</p>
-<p>** 这个世界上有好多像晚霞一样美好的事物，我不想每次都来不及记录，或是让记录散落在备忘录上。**</p>
+<p><strong>这个世界上有好多像晚霞一样美好的事物，我不想每次都来不及记录，或是让记录散落在备忘录上。</strong></p>
 </blockquote>
 <p>于是除了笔记之外，我也想要在这里记录一些可以和大家分享的美好。</p>
 <blockquote>
@@ -916,14 +916,41 @@
 <p>另外，网站名称也来自于我很喜欢的一首歌 <strong>《I love this life》</strong>。</p>
 <p><strong>热爱很重要，所以我们都要热爱生活！！</strong></p>
 <hr />
-<p>欢迎留下你的意见！！</p>
 <h2 id="_2">留言板</h2>
+<p>欢迎留下你的意见！！~</p>
 <script src="https://utteranc.es/client.js"
         repo="Zhi1Pan/Zhi1Pan.github.io"
         issue-term="pathname"
         theme="github-light"
         crossorigin="anonymous"
         async>
+</script>
+
+<hr />
+<div class="pv-counter-wrap">
+  <div class="pv-card" id="busuanzi_container_site_pv" style="display:none;">
+    <span class="pv-number" id="busuanzi_value_site_pv"></span>
+    <span class="pv-label">次浏览</span>
+  </div>
+  <span class="pv-loading-text" id="pv-loading">📊 数据加载中...</span>
+</div>
+
+<script>
+(function() {
+  var check = setInterval(function() {
+    var card = document.getElementById('busuanzi_container_site_pv');
+    var loading = document.getElementById('pv-loading');
+    if (card && card.style.display !== 'none') {
+      if (loading) loading.style.display = 'none';
+      clearInterval(check);
+    }
+  }, 200);
+  setTimeout(function() {
+    var loading = document.getElementById('pv-loading');
+    if (loading) loading.style.display = 'none';
+    clearInterval(check);
+  }, 6000);
+})();
 </script>
 
 
@@ -978,6 +1005,8 @@
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
       
     
   </body>
