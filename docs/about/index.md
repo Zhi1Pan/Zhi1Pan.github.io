@@ -18,7 +18,7 @@ ZJU25心理在读
 >
 > 在这一瞬间萌发了一些想法：
 >
->** 这个世界上有好多像晚霞一样美好的事物，我不想每次都来不及记录，或是让记录散落在备忘录上。**
+>**这个世界上有好多像晚霞一样美好的事物，我不想每次都来不及记录，或是让记录散落在备忘录上。**
 
 于是除了笔记之外，我也想要在这里记录一些可以和大家分享的美好。
 
@@ -30,9 +30,10 @@ ZJU25心理在读
 
 ---
 
-欢迎留下你的意见！！
 
 ## 留言板
+
+欢迎留下你的意见！！~
 
 <script src="https://utteranc.es/client.js"
         repo="Zhi1Pan/Zhi1Pan.github.io"
@@ -40,4 +41,32 @@ ZJU25心理在读
         theme="github-light"
         crossorigin="anonymous"
         async>
+</script>
+
+---
+
+<div class="pv-counter-wrap">
+  <div class="pv-card" id="busuanzi_container_site_pv" style="display:none;">
+    <span class="pv-number" id="busuanzi_value_site_pv"></span>
+    <span class="pv-label">次浏览</span>
+  </div>
+  <span class="pv-loading-text" id="pv-loading">📊 数据加载中...</span>
+</div>
+
+<script>
+(function() {
+  var check = setInterval(function() {
+    var card = document.getElementById('busuanzi_container_site_pv');
+    var loading = document.getElementById('pv-loading');
+    if (card && card.style.display !== 'none') {
+      if (loading) loading.style.display = 'none';
+      clearInterval(check);
+    }
+  }, 200);
+  setTimeout(function() {
+    var loading = document.getElementById('pv-loading');
+    if (loading) loading.style.display = 'none';
+    clearInterval(check);
+  }, 6000);
+})();
 </script>
