@@ -71,6 +71,28 @@
     z-index: 1;
     pointer-events: none;
   }
+  /* ========== 四颗小星星图标（保持原位置横排） ========== */
+  .star-shape {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #fffdf0, #ffe27a 60%, #ffb84d);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    filter: drop-shadow(0 0 6px rgba(255, 226, 122, 0.95)) drop-shadow(0 0 18px rgba(255, 200, 90, 0.55));
+    animation: starTwinkle 2.8s ease-in-out infinite;
+  }
+  @keyframes starTwinkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(0.92); }
+  }
+  /* Notes 左移，Life 下移，Friends 上移，About 右下移 */
+  .home-icon-row .home-icon-item:nth-child(1) { transform: translate(-100px, 0); }
+  .home-icon-row .home-icon-item:nth-child(1):hover { transform: translate(-100px, 0) scale(1.2); }
+  .home-icon-row .home-icon-item:nth-child(2) { transform: translate(-40px, 140px); }
+  .home-icon-row .home-icon-item:nth-child(2):hover { transform: translate(-40px, 140px) scale(1.2); }
+  .home-icon-row .home-icon-item:nth-child(3) { transform: translate(0, -60px); }
+  .home-icon-row .home-icon-item:nth-child(3):hover { transform: translate(0, -60px) scale(1.2); }
+  .home-icon-row .home-icon-item:nth-child(4) { transform: translate(100px, 100px); }
+  .home-icon-row .home-icon-item:nth-child(4):hover { transform: translate(100px, 100px) scale(1.2); }
   /* 让标题、欢迎语、图标盖在流星之上 */
   .md-content h1,
   .home-welcome,
@@ -93,8 +115,9 @@
       max-width: 90%;
       flex-wrap: wrap;
     }
-    .home-icon-emoji {
-      font-size: 3rem;
+    .star-shape {
+      width: 28px;
+      height: 28px;
     }
     .home-icon-label {
       font-size: 0.85rem;
@@ -108,19 +131,19 @@
 
 <div class="home-icon-row">
   <a class="home-icon-item" href="course/">
-    <span class="home-icon-emoji">📚</span>
+    <span class="star-shape"></span>
     <span class="home-icon-label">Notes</span>
   </a>
   <a class="home-icon-item" href="life/">
-    <span class="home-icon-emoji">🍸</span>
+    <span class="star-shape"></span>
     <span class="home-icon-label">Life</span>
   </a>
   <a class="home-icon-item" href="friends/">
-    <span class="home-icon-emoji">🤝</span>
+    <span class="star-shape"></span>
     <span class="home-icon-label">Friends</span>
   </a>
   <a class="home-icon-item" href="about/">
-    <span class="home-icon-emoji">🔗</span>
+    <span class="star-shape"></span>
     <span class="home-icon-label">About</span>
   </a>
 </div>
