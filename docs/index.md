@@ -104,7 +104,7 @@
   /* 手机端适配 */
   @media (max-width: 768px) {
     .md-content h1 {
-      font-size: 3.8rem !important;
+      font-size: 3.2rem !important;
     }
     .home-welcome {
       font-size: 0.9rem;
@@ -114,6 +114,9 @@
       margin-top: 3rem;
       max-width: 90%;
       flex-wrap: wrap;
+    }
+    .home-icon-row .home-icon-item {
+      transform: none !important;
     }
     .star-shape {
       width: 28px;

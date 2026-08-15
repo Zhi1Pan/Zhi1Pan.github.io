@@ -318,3 +318,58 @@ body {
   }
 }
 
+/* ========== 深色模式适配 ========== */
+[data-md-color-scheme="slate"] body {
+  background: linear-gradient(180deg, #1c3a5e 0%, #274a75 12vh, #33567f 22vh, #22364a 33vh);
+  background-attachment: fixed;
+}
+
+[data-md-color-scheme="slate"] .md-header--lifted {
+  background: #16293f !important;
+}
+
+[data-md-color-scheme="slate"] .tl-card {
+  background: #26323f;
+  border: 1px solid #35424f;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+}
+
+[data-md-color-scheme="slate"] .tl-card:hover {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+[data-md-color-scheme="slate"] .tl-text {
+  color: #d0d7de;
+}
+
+[data-md-color-scheme="slate"] .tl-date {
+  color: #7bc8e8;
+}
+
+[data-md-color-scheme="slate"] .tl-dot {
+  border-color: #1d2b3a;
+}
+
+[data-md-color-scheme="slate"] .tl-quote {
+  color: #9aa4b0;
+  border-left-color: #3d6a9e;
+}
+
+[data-md-color-scheme="slate"] .pv-card {
+  background: rgba(123, 200, 232, 0.12);
+  box-shadow: 0 0 60px 16px rgba(123, 200, 232, 0.08);
+}
+
+[data-md-color-scheme="slate"] .pv-number {
+  color: #8db4da;
+}
+
+[data-md-color-scheme="slate"] .pv-label {
+  color: #7bc8e8;
+}
+
+[data-md-color-scheme="slate"] .pv-loading-text {
+  color: #8b96a1;
+}
+
+

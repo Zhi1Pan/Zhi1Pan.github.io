@@ -6,8 +6,20 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
   palette:
-    primary: blue
-    accent: light blue
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: 切换到浅色模式
 
 extra_css:
   - stylesheets/extra.css
