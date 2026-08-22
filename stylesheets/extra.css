@@ -319,56 +319,86 @@ body {
 }
 
 /* ========== 深色模式适配 ========== */
-[data-md-color-scheme="slate"] body {
-  background: linear-gradient(180deg, #1c3a5e 0%, #274a75 12vh, #33567f 22vh, #22364a 33vh);
-  background-attachment: fixed;
+/* 注意：Material 主题把 data-md-color-scheme 标记打在 <body> 自己身上，
+   所以所有深色样式都要用 body[data-md-color-scheme="slate"] 这种写法才会生效 */
+
+/* 深色模式下的主题变量微调：让链接、强调色在深色背景上更清晰 */
+body[data-md-color-scheme="slate"] {
+  --md-typeset-a-color: #8db4da;
+  --md-accent-fg-color: #7bc8e8;
+  --md-accent-fg-color--transparent: rgba(123, 200, 232, 0.15);
 }
 
-[data-md-color-scheme="slate"] .md-header--lifted {
-  background: #16293f !important;
+/* 深色渐变背景：上深蓝 → 往下渐变至纯黑（仅非首页页面，首页有独立全屏背景图） */
+body[data-md-color-scheme="slate"] {
+  background: linear-gradient(180deg, #14283f 0%, #10233a 20vh, #060b14 50vh, #000000 80vh) fixed;
 }
 
-[data-md-color-scheme="slate"] .tl-card {
+/* 滚动后导航栏颜色，与顶部深蓝渐变呼应 */
+body[data-md-color-scheme="slate"] .md-header--lifted {
+  background: #14283f !important;
+}
+
+/* 顶部标签文字在深色下保持清晰 */
+body[data-md-color-scheme="slate"] .md-tabs__link {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body[data-md-color-scheme="slate"] .md-tabs__link--active {
+  color: #ffffff !important;
+}
+
+/* 深色下正文标题颜色更柔和，不刺眼 */
+body[data-md-color-scheme="slate"] .md-typeset h1,
+body[data-md-color-scheme="slate"] .md-typeset h2,
+body[data-md-color-scheme="slate"] .md-typeset h3,
+body[data-md-color-scheme="slate"] .md-typeset h4 {
+  color: #dfe6ee;
+}
+
+/* 舞蹈时间轴卡片深色适配 */
+body[data-md-color-scheme="slate"] .tl-card {
   background: #26323f;
   border: 1px solid #35424f;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
 }
 
-[data-md-color-scheme="slate"] .tl-card:hover {
+body[data-md-color-scheme="slate"] .tl-card:hover {
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
 }
 
-[data-md-color-scheme="slate"] .tl-text {
+body[data-md-color-scheme="slate"] .tl-text {
   color: #d0d7de;
 }
 
-[data-md-color-scheme="slate"] .tl-date {
+body[data-md-color-scheme="slate"] .tl-date {
   color: #7bc8e8;
 }
 
-[data-md-color-scheme="slate"] .tl-dot {
+body[data-md-color-scheme="slate"] .tl-dot {
   border-color: #1d2b3a;
 }
 
-[data-md-color-scheme="slate"] .tl-quote {
+body[data-md-color-scheme="slate"] .tl-quote {
   color: #9aa4b0;
   border-left-color: #3d6a9e;
 }
 
-[data-md-color-scheme="slate"] .pv-card {
+/* 浏览量卡片深色适配 */
+body[data-md-color-scheme="slate"] .pv-card {
   background: rgba(123, 200, 232, 0.12);
   box-shadow: 0 0 60px 16px rgba(123, 200, 232, 0.08);
 }
 
-[data-md-color-scheme="slate"] .pv-number {
+body[data-md-color-scheme="slate"] .pv-number {
   color: #8db4da;
 }
 
-[data-md-color-scheme="slate"] .pv-label {
+body[data-md-color-scheme="slate"] .pv-label {
   color: #7bc8e8;
 }
 
-[data-md-color-scheme="slate"] .pv-loading-text {
+body[data-md-color-scheme="slate"] .pv-loading-text {
   color: #8b96a1;
 }
 
