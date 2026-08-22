@@ -920,14 +920,23 @@
     margin: 0 0 1rem 0 !important;
   }
 
-  /* ========== 真实流星雨动效（画布实现：尾巴留在原地慢慢消失） ========== */
-  #meteorCanvas {
+  /* ========== 星空与流星雨动效（两层画布：星星在下，流星在上） ========== */
+  #starCanvas {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
+    pointer-events: none;
+  }
+  #meteorCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
     pointer-events: none;
   }
   /* ========== 四颗小星星图标（保持原位置横排） ========== */
@@ -964,12 +973,12 @@
     from { opacity: 0; }
     to { opacity: 1; }
   }
-  /* 让标题、欢迎语、图标盖在流星之上 */
+  /* 让标题、欢迎语、图标盖在星空流星之上 */
   .md-content h1,
   .home-welcome,
   .home-icon-row {
     position: relative;
-    z-index: 2;
+    z-index: 3;
   }
 
   /* 手机端适配 */
@@ -1067,6 +1076,85 @@
 </script>
 
 <div class="meteor-wrap">
+<canvas id="starCanvas" aria-hidden="true"></canvas>
+<script>
+(function () {
+  var canvas = document.getElementById('starCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W, H, DPR;
+  var stars = [];
+  function initStars() {
+    stars = [];
+    var count = Math.max(40, Math.min(160, Math.floor(W * H / 9000)));
+    for (var i = 0; i < count; i++) {
+      var roll = Math.random();
+      var xl = roll < 0.08;
+      var big = roll < 0.24;
+      stars.push({
+        x: Math.random() * W,
+        y: Math.random() * H * 0.95,
+        r: xl ? 3.2 + Math.random() * 1.6
+           : big ? 2.0 + Math.random() * 1.2
+           : 0.5 + Math.random() * 0.9,
+        base: 0.25 + Math.random() * 0.55,
+        phase: Math.random() * Math.PI * 2,
+        speed: 0.4 + Math.random() * 1.4,
+        rot: Math.random() * Math.PI * 2,
+        blue: Math.random() < 0.3
+      });
+    }
+  }
+  function resize() {
+    DPR = window.devicePixelRatio || 1;
+    W = window.innerWidth;
+    H = window.innerHeight;
+    canvas.width = W * DPR;
+    canvas.height = H * DPR;
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    initStars();
+  }
+  resize();
+  window.addEventListener('resize', resize);
+  function draw(t) {
+    ctx.clearRect(0, 0, W, H);
+    for (var i = 0; i < stars.length; i++) {
+      var s = stars[i];
+      var tw = 0.55 + 0.45 * Math.sin(t * 0.001 * s.speed * 3 + s.phase);
+      var a = s.base * tw;
+      if (s.r > 1.5) {
+        var g = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 4);
+        var gc = s.blue ? 'rgba(190,220,255,' + (a * 0.7).toFixed(3) + ')' : 'rgba(255,255,255,' + (a * 0.7).toFixed(3) + ')';
+        g.addColorStop(0, gc);
+        g.addColorStop(1, 'rgba(255,255,255,0)');
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r * 4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = Math.min(1, a);
+      ctx.fillStyle = s.blue ? '#dcecff' : '#ffffff';
+      ctx.save();
+      ctx.translate(s.x, s.y);
+      ctx.rotate(s.rot);
+      var rr = s.r;
+      ctx.beginPath();
+      ctx.moveTo(0, -rr * 2.6);
+      ctx.quadraticCurveTo(rr * 0.25, -rr * 0.25, rr * 2.6, 0);
+      ctx.quadraticCurveTo(rr * 0.25, rr * 0.25, 0, rr * 2.6);
+      ctx.quadraticCurveTo(-rr * 0.25, rr * 0.25, -rr * 2.6, 0);
+      ctx.quadraticCurveTo(-rr * 0.25, -rr * 0.25, 0, -rr * 2.6);
+      ctx.fill();
+      ctx.restore();
+      ctx.globalAlpha = 1;
+    }
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
+</script>
 <canvas id="meteorCanvas" aria-hidden="true"></canvas>
 <script>
 (function () {
@@ -1086,13 +1174,19 @@
   }
   resize();
   window.addEventListener('resize', resize);
-  var colors = ['#5c8bc2', '#4a75ab', '#7bc8e8', '#64b5f6', '#3d6a9e', '#8db4da', '#42a5f5', '#1e88e5'];
+  var colors = ['#ffffff', '#ffffff', '#ffffff', '#fff3d6', '#fff3d6', '#ffebba', '#eaf2ff', '#d9f2e4'];
   var meteors = [];
+  var sparks = [];
   function spawn() {
-    if (meteors.length >= 8) return;
+    if (meteors.length >= 10) return;
+    var roll = Math.random();
+    var sc;
+    if (roll < 0.08) sc = 2.4 + Math.random() * 0.6;
+    else if (roll < 0.4) sc = 1.5 + Math.random() * 0.4;
+    else sc = 0.75 + Math.random() * 0.55;
     var r = Math.random();
     var x, y;
-    if (r < 0.6) {
+    if (r < 0.55) {
       x = W * (0.5 + Math.random() * 0.45);
       y = H * (Math.random() * 0.3);
     } else if (r < 0.85) {
@@ -1102,9 +1196,8 @@
       x = W * (0.55 + Math.random() * 0.4);
       y = H * (0.45 + Math.random() * 0.3);
     }
-    var big = Math.random() < 0.18;
-    var speed = (2.0 + Math.random() * 1.8) * (W / 900);
-    var angle = (22 + Math.random() * 32) * Math.PI / 180;
+    var speed = (1.8 + Math.random() * 2.2) * (W / 900) * (sc > 2 ? 0.85 : 1);
+    var angle = (20 + Math.random() * 34) * Math.PI / 180;
     var sx = -speed * Math.sin(angle);
     var sy = speed * Math.cos(angle);
     meteors.push({
@@ -1113,11 +1206,48 @@
       tvx: sx * 2.4, tvy: sy * 2.4,
       twPhase: Math.random() * Math.PI * 2,
       color: colors[(Math.random() * colors.length) | 0],
-      big: big,
-      len: (110 + Math.random() * 110) * (big ? 1.5 : 1),
+      sc: sc,
+      len: (90 + Math.random() * 150) * sc,
       life: 0,
-      maxLife: (60 + Math.random() * 45) * (big ? 1.3 : 1)
+      sparkTimer: 0,
+      maxLife: (55 + Math.random() * 45) * (sc > 2 ? 1.5 : 1)
     });
+  }
+  function emitSparks(m) {
+    if (m.life < 4) return;
+    m.sparkTimer--;
+    if (m.sparkTimer > 0) return;
+    m.sparkTimer = 1 + ((Math.random() * 3) | 0);
+    var n = m.sc > 1.5 ? 2 : 1;
+    for (var k = 0; k < n; k++) {
+      sparks.push({
+        x: m.x, y: m.y,
+        vx: m.vx * (0.2 + Math.random() * 0.3) + (Math.random() - 0.5) * 0.8,
+        vy: m.vy * (0.2 + Math.random() * 0.3) + (Math.random() - 0.5) * 0.8,
+        r: (1.1 * m.sc) + Math.random() * 0.7,
+        life: 0,
+        maxLife: (20 + ((Math.random() * 25) | 0)),
+        color: m.color
+      });
+    }
+  }
+  function stepSparks() {
+    for (var i = sparks.length - 1; i >= 0; i--) {
+      var sp = sparks[i];
+      sp.life++;
+      if (sp.life > sp.maxLife) { sparks.splice(i, 1); continue; }
+      sp.vx *= 0.94;
+      sp.vy *= 0.94;
+      sp.x += sp.vx;
+      sp.y += sp.vy;
+      var a = 1 - sp.life / sp.maxLife;
+      ctx.globalAlpha = a * 0.85;
+      ctx.fillStyle = sp.color;
+      ctx.beginPath();
+      ctx.arc(sp.x, sp.y, sp.r * (0.4 + 0.6 * a), 0, Math.PI * 2);
+      ctx.fill();
+      ctx.globalAlpha = 1;
+    }
   }
   function step() {
     ctx.globalCompositeOperation = 'destination-out';
@@ -1134,6 +1264,7 @@
       m.vy += (m.tvy - m.vy) * 0.05;
       m.x += m.vx;
       m.y += m.vy;
+      emitSparks(m);
       var appear = Math.min(1, m.life / 6);
       var fade = 1 - Math.max(0, (m.life - (m.maxLife - 10)) / 10);
       var tw = 0.85 + 0.15 * Math.sin(m.life * 0.45 + m.twPhase);
@@ -1147,7 +1278,7 @@
         var t = s / segs;
         var px = m.x - ux * m.len * t;
         var py = m.y - uy * m.len * t;
-        var w = (m.big ? 8.5 : 5.5) * (1 - t) + 0.5;
+        var w = (5.5 * m.sc) * (1 - t) + 0.5;
         var a = bright * (1 - t * t) * 0.9;
         ctx.globalAlpha = a;
         ctx.strokeStyle = t < 0.25 ? '#ffffff' : m.color;
@@ -1157,7 +1288,7 @@
         ctx.lineTo(px - ox * (w / 2), py - oy * (w / 2));
         ctx.stroke();
       }
-      var hr = m.big ? 11 : 8;
+      var hr = 8 * m.sc;
       var hg = ctx.createRadialGradient(m.x, m.y, 0, m.x, m.y, hr);
       hg.addColorStop(0, 'rgba(255,255,255,1)');
       hg.addColorStop(0.4, 'rgba(255,255,255,0.9)');
@@ -1169,6 +1300,7 @@
       ctx.arc(m.x, m.y, hr, 0, Math.PI * 2);
       ctx.fill();
     }
+    stepSparks();
     requestAnimationFrame(step);
   }
   var timer = 0;
@@ -1176,11 +1308,11 @@
     timer--;
     if (timer <= 0) {
       spawn();
-      timer = 12 + ((Math.random() * 24) | 0);
+      timer = 10 + ((Math.random() * 20) | 0);
     }
     setTimeout(schedule, 60);
   }
-  setTimeout(schedule, 400);
+  setTimeout(schedule, 300);
   requestAnimationFrame(step);
 })();
 </script>
