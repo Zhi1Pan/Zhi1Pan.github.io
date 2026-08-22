@@ -943,15 +943,27 @@
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.7; transform: scale(0.92); }
   }
-  /* Notes 左移，Life 下移，Friends 上移，About 右下移 */
-  .home-icon-row .home-icon-item:nth-child(1) { transform: translate(-100px, 0); }
-  .home-icon-row .home-icon-item:nth-child(1):hover { transform: translate(-100px, 0) scale(1.2); }
-  .home-icon-row .home-icon-item:nth-child(2) { transform: translate(-40px, 140px); }
-  .home-icon-row .home-icon-item:nth-child(2):hover { transform: translate(-40px, 140px) scale(1.2); }
-  .home-icon-row .home-icon-item:nth-child(3) { transform: translate(0, -60px); }
-  .home-icon-row .home-icon-item:nth-child(3):hover { transform: translate(0, -60px) scale(1.2); }
-  .home-icon-row .home-icon-item:nth-child(4) { transform: translate(100px, 100px); }
-  .home-icon-row .home-icon-item:nth-child(4):hover { transform: translate(100px, 100px) scale(1.2); }
+  /* 四颗星星图标错落有致且整体平衡：上下左右对称的钻石型布局 */
+  .home-icon-row .home-icon-item:nth-child(1) { transform: translate(-90px, -10px); }
+  .home-icon-row .home-icon-item:nth-child(1):hover { transform: translate(-90px, -10px) scale(1.15); }
+  .home-icon-row .home-icon-item:nth-child(2) { transform: translate(-30px, 120px); }
+  .home-icon-row .home-icon-item:nth-child(2):hover { transform: translate(-30px, 120px) scale(1.15); }
+  .home-icon-row .home-icon-item:nth-child(3) { transform: translate(30px, -90px); }
+  .home-icon-row .home-icon-item:nth-child(3):hover { transform: translate(30px, -90px) scale(1.15); }
+  .home-icon-row .home-icon-item:nth-child(4) { transform: translate(90px, 90px); }
+  .home-icon-row .home-icon-item:nth-child(4):hover { transform: translate(90px, 90px) scale(1.15); }
+  /* 图标依次淡入浮现，更有层次感 */
+  .home-icon-item {
+    animation: iconFadeIn 0.8s ease both;
+  }
+  .home-icon-item:nth-child(1) { animation-delay: 0.15s; }
+  .home-icon-item:nth-child(2) { animation-delay: 0.3s; }
+  .home-icon-item:nth-child(3) { animation-delay: 0.45s; }
+  .home-icon-item:nth-child(4) { animation-delay: 0.6s; }
+  @keyframes iconFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
   /* 让标题、欢迎语、图标盖在流星之上 */
   .md-content h1,
   .home-welcome,
