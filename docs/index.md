@@ -115,15 +115,28 @@
 
   /* 手机端适配 */
   @media (max-width: 768px) {
+    html, body {
+      overflow: auto;
+    }
+    .md-main {
+      overflow-y: auto;
+    }
+    .md-main__inner {
+      height: auto;
+      min-height: 100vh;
+      min-height: 100dvh;
+      align-items: center;
+      padding-top: 1vh;
+    }
     .md-content h1 {
-      font-size: 3.2rem !important;
+      font-size: 3rem !important;
     }
     .home-welcome {
       font-size: 0.9rem;
     }
     .home-icon-row {
       gap: 1.5rem;
-      margin-top: 3rem;
+      margin-top: 2.5rem;
       max-width: 90%;
       flex-wrap: wrap;
     }
@@ -131,11 +144,26 @@
       transform: none !important;
     }
     .star-shape {
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
     }
     .home-icon-label {
       font-size: 0.85rem;
+    }
+  }
+
+  /* 更小屏幕（如 iPhone SE / 小屏安卓）：进一步压缩 */
+  @media (max-width: 420px) {
+    .md-content h1 {
+      font-size: 2.4rem !important;
+    }
+    .home-icon-row {
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .star-shape {
+      width: 24px;
+      height: 24px;
     }
   }
 </style>
