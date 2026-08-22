@@ -210,8 +210,9 @@ html {
 
 /* 页面渐变蓝背景（上深下浅，1/3处变白，从顶部导航栏开始） */
 body {
-  background: linear-gradient(180deg, #4a75ab 0%, #7aaddd 12vh, #b8d4ec 22vh, #ffffff 33vh);
+  background: linear-gradient(180deg, #4a75ab 0%, #7aaddd 12vh, #b8d4ec 22vh, #ffffff 33vh) no-repeat center top / 100% 100vh;
   background-attachment: fixed;
+  background-color: #ffffff;
 }
 
 /* 导航栏透明，让渐变从顶部自然呈现 */
@@ -331,7 +332,9 @@ body[data-md-color-scheme="slate"] {
 
 /* 深色渐变背景：上深蓝 → 往下渐变至纯黑（仅非首页页面，首页有独立全屏背景图） */
 body[data-md-color-scheme="slate"] {
-  background: linear-gradient(180deg, #14283f 0%, #10233a 20vh, #060b14 50vh, #000000 80vh) fixed;
+  background: linear-gradient(180deg, #14283f 0%, #10233a 20vh, #060b14 50vh, #000000 80vh) no-repeat center top / 100% 100vh;
+  background-attachment: fixed;
+  background-color: #000000;
 }
 
 /* 滚动后导航栏颜色，与顶部深蓝渐变呼应 */
